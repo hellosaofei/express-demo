@@ -12,7 +12,7 @@ import {
 } from "../../data/realData/timeLineData_2.js";
 
 // 前端项目日志接口
-initRouter.get("/timeline/v1/getList", (req, res) => {
+initRouter.get("/v1/getList", (req, res) => {
   res.json({
     code: 200,
     msg: "success",
@@ -22,7 +22,7 @@ initRouter.get("/timeline/v1/getList", (req, res) => {
 });
 
 // 后端项目日志接口
-initRouter.get("/timeline/v2/getList", (req, res) => {
+initRouter.get("/v2/getList", (req, res) => {
   res.json({
     code: 200,
     msg: "success",

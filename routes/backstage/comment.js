@@ -1,7 +1,7 @@
 import { commentList, count } from "../../data/mockData/commentData.js";
 import initRouter from "../initRoute.js";
 
-initRouter.post("/comment/getList", (req, res) => {
+initRouter.post("/getList", (req, res) => {
   if (!req.body) {
     res.send({
       code: 200,

@@ -1,7 +1,7 @@
 import { orderList, count } from "../../data/mockData/orderData.js";
 import initRouter from "../initRoute.js";
 
-initRouter.post("/order/getList", (req, res) => {
+initRouter.post("/getList", (req, res) => {
   if (!req.body) {
     res.send({
       code: 200,

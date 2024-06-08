@@ -1,7 +1,7 @@
 import { logList, count } from "../../data/mockData/systemLogData.js";
 import initRouter from "../initRoute.js";
 
-initRouter.post("/systemlog/getList", (req, res) => {
+initRouter.post("/getList", (req, res) => {
   if (!req.body) {
     res.send({
       code: 200,
