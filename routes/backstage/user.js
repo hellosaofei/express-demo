@@ -32,7 +32,7 @@ const users = {
   },
 };
 
-initRouter.post("/user/login", (req, res) => {
+initRouter.post("/login", (req, res) => {
   const { username } = req.body;
   const token = tokens[username];
 
@@ -50,7 +50,7 @@ initRouter.post("/user/login", (req, res) => {
   });
 });
 
-initRouter.get("/user/info", (req, res) => {
+initRouter.get("/info", (req, res) => {
   const { token } = req.query;
   const info = users[token];
 
@@ -69,7 +69,7 @@ initRouter.get("/user/info", (req, res) => {
 });
 
 // 用户退出，直接返回success
-initRouter.post("/user/logout", (req, res) => {
+initRouter.post("/logout", (req, res) => {
   res.send({
     code: 20000,
     data: "success",

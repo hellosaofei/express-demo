@@ -767,3 +767,13 @@
 [2024-06-02T20:15:43.822] [DEBUG] default - GET /route/list
 [2024-06-02T20:28:08.455] [DEBUG] default - GET /route/list
 [2024-06-02T20:30:56.670] [DEBUG] default - GET /route/list
+[2024-06-09T09:53:11.790] [DEBUG] default - POST /register
+[2024-06-09T09:54:45.903] [DEBUG] default - POST /register
+[2024-06-09T10:05:44.976] [DEBUG] default - POST /register
+[2024-06-09T10:14:10.344] [DEBUG] default - POST /register
+[2024-06-09T11:10:25.185] [DEBUG] default - POST /register
+[2024-06-09T11:11:55.976] [DEBUG] default - POST /register
+[2024-06-09T11:21:44.018] [DEBUG] default - POST /register
+[2024-06-09T11:23:01.456] [DEBUG] default - POST /register
+[2024-06-09T11:27:41.412] [DEBUG] default - POST /register
+[2024-06-09T11:29:41.037] [DEBUG] default - POST /register
