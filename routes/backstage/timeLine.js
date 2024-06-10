@@ -11,8 +11,11 @@ import {
   count_v2,
 } from "../../data/realData/timeLineData_2.js";
 
+// 导入accessToken鉴权中间件
+import { auth } from "../../middleware/auth.js";
+
 // 前端项目日志接口
-initRouter.get("/v1/getList", (req, res) => {
+initRouter.get("/v1/getList", auth, (req, res) => {
   res.json({
     code: 200,
     msg: "success",
