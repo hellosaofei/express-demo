@@ -11,12 +11,14 @@ import cors from "cors";
 import middleware from "./middleware/index.js";
 
 const app = express();
+// 根据中间件处理逻辑，编排中间件的先后顺序
+app.use(middleware.timer);
+app.use(middleware.logger);
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(middleware.logger);
 //搭建简易的静态资源服务器
 app.use(express.static("public"));
 // app.use('/public',express.static('public'))

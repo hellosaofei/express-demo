@@ -234,6 +234,69 @@ const timelineList_v1 = [
       "进入系统后，屏幕右侧的悬浮按钮，主要新增了两个组件，components/RightPane：用于全局挂载悬浮按钮，\
       Layout/components/Setting:定义了全局布局配置都涉及了哪些内容",
   },
+  {
+    id: 2024052501,
+    dateTime: "2024/05/25",
+    tagList: [
+      {
+        type: 2,
+        content: "功能新增",
+      },
+      {
+        type: 3,
+        content: "原生JS",
+      },
+      {
+        type: 1,
+        content: "轮播图",
+      },
+    ],
+    UpdateSummary: "JS手写轮播图，无缝轮播",
+    UpdateContent: "css相关 >> 轮播图",
+  },
+  {
+    id: 2024053001,
+    dateTime: "2024/05/30",
+    tagList: [
+      {
+        type: 2,
+        content: "功能新增",
+      },
+      {
+        type: 2,
+        content: "token",
+      },
+      {
+        type: 2,
+        content: "无感刷新",
+      },
+    ],
+    UpdateSummary: "基于双token的无感刷新",
+    UpdateContent:
+      "用户登录后，后端下发refreshToken和accessToken两个token，有效期一长一短，前者负责刷新token，后者负责\
+      业务逻辑请求。保存在vuex中。全局路由守卫监听后端返回的状态码，当状态码显示accessToken失效时，重新请求token\
+      通过事件总线重新发起亲请求。",
+  },
+  {
+    id: 20240616,
+    dateTime: "2024/06/16",
+    tagList: [
+      {
+        type: 2,
+        content: "功能新增",
+      },
+      {
+        type: 2,
+        content: "大文件上传",
+      },
+      {
+        type: 2,
+        content: "jwt",
+      },
+    ],
+    UpdateSummary: "新增大文件上传业务",
+    UpdateContent: "JS相关 >> 文件上传",
+  },
 ];
 
 let count_v1 = timelineList_v1.length;

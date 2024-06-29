@@ -1,7 +1,8 @@
 import { stasticData } from "../../data/mockData/stasticPanel.js";
-import initRouter from "../initRoute.js";
+import express from "express";
 
-initRouter.get("/getList", (req, res) => {
+const router = express.Router();
+router.get("/getList", (req, res) => {
   res.send({
     code: 200,
     msg: "success",
@@ -9,4 +10,4 @@ initRouter.get("/getList", (req, res) => {
   });
 });
 
-export default initRouter;
+export default router;

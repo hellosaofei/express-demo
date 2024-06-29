@@ -13,6 +13,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "express-fileupload": "^1.5.0",
     "jsonwebtoken": "^9.0.2",
     "log4js": "^6.9.1",
     "md5": "^2.3.0",

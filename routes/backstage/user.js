@@ -1,5 +1,6 @@
-import initRouter from "../initRoute.js";
+import express from "express";
 
+const router = express.Router();
 // 用户使用用户名【admin】或【editor】进行登录时，
 // 请求参数：用户名
 // 返回值：下面的token值
@@ -32,7 +33,7 @@ const users = {
   },
 };
 
-initRouter.post("/login", (req, res) => {
+router.post("/login", (req, res) => {
   const { username } = req.body;
   const token = tokens[username];
 
@@ -50,7 +51,7 @@ initRouter.post("/login", (req, res) => {
   });
 });
 
-initRouter.get("/info", (req, res) => {
+router.get("/info", (req, res) => {
   const { token } = req.query;
   const info = users[token];
 
@@ -69,11 +70,11 @@ initRouter.get("/info", (req, res) => {
 });
 
 // 用户退出，直接返回success
-initRouter.post("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
   res.send({
     code: 20000,
     data: "success",
   });
 });
 
-export default initRouter;
+export default router;

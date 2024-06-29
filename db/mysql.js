@@ -16,7 +16,7 @@ class DBInstance {
       .then(([result, fields]) => {
         // sql语句执行结果为
 
-        console.log("sql语句执行结果为", result, fields);
+        // console.log("sql语句执行结果为", result, fields);
         return result;
       })
       .catch((error) => {
@@ -36,12 +36,12 @@ class DBInstance {
 
     return this.connectPool.getConnection((err, conn) => {
       if (err instanceof Error) {
-        console.log("从数据库连接池中取出连接实例时出现错误", err);
+        console.log("从数据库连接池中取出连接实例时出现错误");
         return;
       }
       return conn.execute(sql, sqlArr, (err, result, fields) => {
         if (err instanceof Error) {
-          console.log("执行sql时出现错误", err);
+          console.log("执行sql时出现错误");
           conn.release();
           return;
         }
@@ -63,7 +63,7 @@ class DBInstance {
         .execute(sql, sqlArr)
         .then((result) => {
           // 执行插入语句后，返回的result结果是一个ResultSetHeader 对象，似乎不用返回
-          console.log("执行查询sql语句的结果为：", result);
+          console.log("执行查询sql语句的结果为：");
           resolve();
         })
         .catch((err) => {
@@ -86,7 +86,7 @@ class DBInstance {
       conn
         .execute(sql, sqlArr)
         .then(([rows, fields]) => {
-          console.log("执行查询sql语句的结果为：", rows);
+          console.log("执行查询sql语句的结果为：");
           resolve(rows);
         })
         .catch((err) => {
@@ -110,7 +110,7 @@ class DBInstance {
         .execute(sql, sqlArr)
         .then((result) => {
           // 执行插入语句后，返回的result结果是一个ResultSetHeader 对象，似乎不用返回
-          console.log("执行查询sql语句的结果为：", result);
+          console.log("执行查询sql语句的结果为：");
           resolve();
         })
         .catch((err) => {
@@ -135,7 +135,7 @@ class DBInstance {
         .then((result) => {
           // 执行插入语句后，返回的result结果是一个ResultSetHeader 对象，似乎不用返回
           // 只要不出错，就代表操作成功
-          console.log("执行查询sql语句的结果为：", result);
+          console.log("执行查询sql语句的结果为：");
           resolve();
         })
         .catch((err) => {

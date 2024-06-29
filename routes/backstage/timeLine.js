@@ -1,4 +1,6 @@
-import initRouter from "../initRoute.js";
+import express from "express";
+
+const router = express.Router();
 // 导入前端项目更新日志数据
 import {
   timelineList_v1,
@@ -15,7 +17,7 @@ import {
 import { auth } from "../../middleware/auth.js";
 
 // 前端项目日志接口
-initRouter.get("/v1/getList", auth, (req, res) => {
+router.get("/v1/getList", auth, (req, res) => {
   res.json({
     code: 200,
     msg: "success",
@@ -25,7 +27,7 @@ initRouter.get("/v1/getList", auth, (req, res) => {
 });
 
 // 后端项目日志接口
-initRouter.get("/v2/getList", (req, res) => {
+router.get("/v2/getList", (req, res) => {
   res.json({
     code: 200,
     msg: "success",
@@ -33,4 +35,4 @@ initRouter.get("/v2/getList", (req, res) => {
     data: timelineList_v2,
   });
 });
-export default initRouter;
+export default router;

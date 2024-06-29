@@ -41,9 +41,9 @@ export function verifyLength(username, password) {
  */
 
 // 一个小时
-const accessTokenTime = "10s";
+const accessTokenTime = "1h";
 // 三个小时
-const RefreshTokenTime = "2m";
+const RefreshTokenTime = "5h";
 
 export function setAccessToken(payload = {}) {
   return jwt.sign(payload, DefaultConfig.PRIVATE_KEY, {

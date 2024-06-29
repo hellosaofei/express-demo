@@ -1,7 +1,8 @@
 import { logList, count } from "../../data/mockData/systemLogData.js";
-import initRouter from "../initRoute.js";
+import express from "express";
 
-initRouter.post("/getList", (req, res) => {
+const router = express.Router();
+router.post("/getList", (req, res) => {
   if (!req.body) {
     res.send({
       code: 200,
@@ -28,4 +29,4 @@ initRouter.post("/getList", (req, res) => {
   });
 });
 
-export default initRouter;
+export default router;

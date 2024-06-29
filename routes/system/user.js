@@ -1,15 +1,20 @@
-import initRouter from "../initRoute.js";
+import express from "express";
 import { register, login, refresh } from "../../controllers/user.js";
+
+const router = express.Router();
 // 注册接口
-initRouter.post("/register", register);
+router.post("/register", register);
 
 // 登录接口
-initRouter.post("/login111", login);
+router.post("/login", login);
 
 // 刷新 token
-initRouter.get("/refresh", refresh);
+router.get("/refresh", refresh);
 // 注销接口
-
-// initRouter.get("/logout");
-
-export default initRouter;
+router.post("/logout", (req, res) => {
+  res.send({
+    code: 2000,
+    data: "success",
+  });
+});
+export default router;
